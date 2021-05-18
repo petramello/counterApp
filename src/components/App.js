@@ -7,7 +7,10 @@ const App = () => {
   return (
       <>
         <Navbar />
-        <Counter />
+        <Counter product='Camisa' />
+        <Counter product='Calça' />
+        <Counter product='Tenis' />
+        <Counter product='Meia' />
       </>
   )
 }
