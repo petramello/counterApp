@@ -35,7 +35,7 @@ const Counter = (props) => {
         <div onClick={subtractCounter} style={{...getStyle(counter>0 ? '#69C3D1' : 'grey'), cursor: counter>0 ? 'pointer' : 'initial'}} >
           -
         </div>
-        <div onClick={ () => setCounter(0)} style={{...getStyle('#DC3545'), cursor: counter>0 ? 'pointer' : 'initial'}} >
+        <div onClick={props.onDelete} style={{...getStyle('#DC3545'), cursor: counter>0 ? 'pointer' : 'initial'}} >
           <FaTrashAlt />
         </div>
       </div>
