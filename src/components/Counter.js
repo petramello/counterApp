@@ -11,6 +11,7 @@ const getStyle = backgroundColor => {
   }
 }
 
+
 const Counter = (props) => {
 
   const [counter, setCounter] = useState(0);
@@ -20,7 +21,6 @@ const Counter = (props) => {
       setCounter(counter - 1);
     }
   }
-
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', margin: '10px', alignItems: 'center', justifyContent: 'center'}}>
