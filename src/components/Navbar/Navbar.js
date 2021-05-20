@@ -3,12 +3,12 @@ import {FaShoppingCart} from "react-icons/fa";
 import {Balance, Container, Icon} from "./styled";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   return (
     <Container>
       <Icon> <FaShoppingCart /> </Icon>
-      <Balance> 0 </Balance>
+      <Balance>{props.itemsAmount}</Balance>
       <span>Items</span>
     </Container>
   )

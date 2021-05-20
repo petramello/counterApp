@@ -5,11 +5,9 @@ import {ItemContainer, Container, ProductContainer} from "./styled";
 
 const Counter = (props) => {
 
-  const [counter, setCounter] = useState(0);
-
   const subtractCounter = () => {
-    if (counter > 0) {
-      setCounter(counter - 1);
+    if (props.counter > 0) {
+      props.setCounter(props.counter - 1);
     }
   }
 
@@ -18,14 +16,14 @@ const Counter = (props) => {
       <span>{props.product}</span>
       <ProductContainer>
         <ItemContainer bgColor='#F6C006'>
-          {counter || 'Zero'}
+          {props.counter || 'Zero'}
         </ItemContainer>
 
-        <ItemContainer onClick={ () => setCounter(counter + 1)} bgColor='#3CB371' clickable>
+        <ItemContainer onClick={ () => props.setCounter(props.counter + 1)} bgColor='#3CB371' clickable>
           +
         </ItemContainer>
 
-        <ItemContainer onClick={subtractCounter} bgColor={counter>0 ? '#69C3D1' : 'grey'} clickable={counter>0}>
+        <ItemContainer onClick={subtractCounter} bgColor={props.counter>0 ? '#69C3D1' : 'grey'} clickable={props.counter>0}>
           -
         </ItemContainer>
 
