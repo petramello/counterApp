@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-import {ItemContainer, Container, ProductContainer} from "./Styled";
+import {ItemContainer, Container, ProductContainer} from "./styled";
 
 
 const Counter = (props) => {
