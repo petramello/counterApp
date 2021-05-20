@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
-
-
-const getStyle = backgroundColor => {
-  return {
-    backgroundColor,
-    padding: '10px',
-    margin: '5px',
-    borderRadius: '5px',
-  }
-}
+import {ItemContainer, Container, ProductContainer} from "./Styled";
 
 
 const Counter = (props) => {
@@ -23,24 +14,31 @@ const Counter = (props) => {
   }
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', margin: '10px', alignItems: 'center', justifyContent: 'center'}}>
+    <Container>
       <span>{props.product}</span>
-      <div style={{display: 'flex', color: '#ffffff', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{...getStyle('#F6C006'), cursor: 'initial'}}>
+      <ProductContainer>
+        <ItemContainer bgColor='#F6C006'>
           {counter || 'Zero'}
-        </div>
-        <div onClick={ () => setCounter(counter + 1)} style={{...getStyle('#3CB371'), cursor: 'pointer'}} >
-          +
-        </div>
-        <div onClick={subtractCounter} style={{...getStyle(counter>0 ? '#69C3D1' : 'grey'), cursor: counter>0 ? 'pointer' : 'initial'}} >
-          -
-        </div>
-        <div onClick={props.onDelete} style={{...getStyle('#DC3545'), cursor: counter>0 ? 'pointer' : 'initial'}} >
-          <FaTrashAlt />
-        </div>
-      </div>
-    </div>
+        </ItemContainer>
 
+        <ItemContainer onClick={ () => setCounter(counter + 1)} bgColor='#3CB371' clickable>
+          +
+        </ItemContainer>
+
+        <ItemContainer onClick={subtractCounter} bgColor={counter>0 ? '#69C3D1' : 'grey'} clickable={counter>0}>
+          -
+        </ItemContainer>
+
+        <ItemContainer onClick={props.onDelete} bgColor='#DC3545' clickable>
+          <FaTrashAlt />
+        </ItemContainer>
+
+        <ItemContainer bgColor='#f8f8f8' color='#black' clickable>
+          {props.price}
+        </ItemContainer>
+
+      </ProductContainer>
+    </Container>
   )
 }
 
