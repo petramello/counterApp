@@ -10,7 +10,6 @@ export const Container = styled.div`
 
 export const ProductContainer = styled.div`
   display: flex;
-
   align-items: center;
   justify-content: center;
 `
@@ -23,4 +22,7 @@ export const ItemContainer = styled.div`
     border-radius: 5px;
     color: ${props => props.color || "#ffffff"};
     user-select: none;
+    width: 40px;
+    display: flex;
+    justify-content: center;
 `
