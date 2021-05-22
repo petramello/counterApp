@@ -33,7 +33,13 @@ To run the project, use a terminal and run:
 
 yarn (to install node_modules)
 yarn start (to run the environment and open the website)
+<br>
+<br>
 
+🔗 Deploy
 
+Deploy/Hosting by Firebase.
+
+You can find this site on [SITE] (https://counterapp-4318d.web.app/)
 
 
