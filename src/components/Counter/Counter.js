@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect} from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import {ItemContainer, Container, ProductContainer} from "./styled";
 
@@ -11,6 +11,15 @@ const Counter = (props) => {
     }
   }
 
+  useEffect( () => {
+    console.log("counter", props.counter, "price", props.price)
+    props.setPrice(props.counter * props.price)
+  }, [props.counter]
+  )
+
+
+
+
   return (
     <Container>
       <span>{props.product}</span>
@@ -19,7 +28,8 @@ const Counter = (props) => {
           {props.counter || 'Zero'}
         </ItemContainer>
 
-        <ItemContainer onClick={ () => props.setCounter(props.counter + 1)} bgColor='#3CB371' clickable>
+        <ItemContainer
+          onClick={ () => props.setCounter(props.counter + 1)} bgColor='#3CB371' clickable>
           +
         </ItemContainer>
 
@@ -32,7 +42,7 @@ const Counter = (props) => {
         </ItemContainer>
 
         <ItemContainer bgColor='#f8f8f8' color='#black' clickable>
-          {props.price}
+          {props.totalValue || 0}
         </ItemContainer>
 
       </ProductContainer>

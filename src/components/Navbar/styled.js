@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 50px;
-  background-color: #f8f9fa;
+  background-color: ${props => props.bgColor || "#f8f9fa"};
   width: 100%;
   padding: 8px 16px;
   display: flex;
