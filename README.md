@@ -11,7 +11,7 @@ Developed at May/2021 aiming to training React, props, State, useEffect and lift
 
 📋 **Site information**
 
-This is a counter site, you can count the unit of product and the item iself. You can add and subtract the amount of product, put the item into trash and cauculate the final price of each item.
+This is a counter site, you can count the unit of product and the item itself. You can add and subtract the amount of product, put the item into trash and calculate the final price of each item.
 This was made to train a project development from the scratch to it functionality. 
 Few of the topics aproched were stylling, use of libraries, icons and functionalities using useState and useEffect. 
 <br>
@@ -19,7 +19,7 @@ Few of the topics aproched were stylling, use of libraries, icons and functional
 
 🛠️  **Technologies**
 
-JSX, JS, React, Styled-components
+HTML, JSX, JS, React, Styled-components
 <br>
 <br>
 
