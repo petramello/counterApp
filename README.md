@@ -40,6 +40,6 @@ yarn start (to run the environment and open the website)
 
 Deploy/Hosting by Firebase.
 
-You can find this site on [SITE] (https://counterapp-4318d.web.app/)
+You can find this site on [SITE](https://counterapp-4318d.web.app/)
 
 
